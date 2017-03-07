@@ -1,0 +1,23 @@
+{
+  "name": "grunt-es6-uglify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.22.0",
+    "grunt": "^1.0.1",
+    "grunt-babel": "^6.0.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-es6-transpiler": "^1.0.2",
+    "grunt-express-server": "git+https://github.com/Zev23/grunt-express-server.git",
+    "grunt-regenerator": "^4.0.0",
+    "load-grunt-tasks": "^3.5.2"
+  }
+}
