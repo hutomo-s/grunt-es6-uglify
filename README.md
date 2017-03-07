@@ -101,14 +101,14 @@ Hey! This is a tutorial for compressing es6 javascript files. Let's learn togeth
     grunt
     ```
 
-Change or Modifications Guideline
--------------
+## Change or Modifications Guideline
 
 1. Find the task on gruntfile.js and modify task one by one.
 2. Test it in development (or local) server.
     ```grunt```
 3. Deploy to production server.
 
-Copyright
--------------
+
+## Copyright
+
 Copyright 2017 by Hutomo Sugianto. All rights reserved.
