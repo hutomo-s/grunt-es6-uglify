@@ -101,11 +101,24 @@ Hey! This is a tutorial for compressing es6 javascript files. Let's learn togeth
     grunt
     ```
 
+## Explanation of gruntfile.js
+
+```grunt babel```
+- Transpile and output dist/app.trans.js
+
+```grunt regenerator```
+- Input: dist/app.trans.js. Output: dist/app.es5.js
+
+```grunt uglify```
+- Input: dist/app.es5.js. Output: dist/app.min.js
+
+
 ## Change or Modifications Guideline
 
 1. Find the task on gruntfile.js and modify task one by one.
 2. Test it in development (or local) server.
     ```grunt```
+    
 3. Deploy to production server.
 
 
