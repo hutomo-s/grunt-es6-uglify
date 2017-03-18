@@ -2,8 +2,30 @@ module.exports = function(grunt){
   "use strict";
 
   require("load-grunt-tasks")(grunt);
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   grunt.initConfig({
+
+    copy: {
+      main: {
+        files: [
+          {
+            expand: true, 
+            //cwd: 'src/', 
+            src: ['src/js/**'], 
+            dest: 'unified/', 
+            rename: function(dest, src) {
+              // use the source directory to create the file
+              // example with your directory structure
+              //   dest = 'dev/js/'
+              //   src = 'module1/js/main.js'
+              return dest + src.replace(new RegExp('/', 'g'), '_');
+            }
+          },
+        ]
+      }
+    },
+
     babel: {
         options: {
             sourceMap: true,
@@ -45,6 +67,6 @@ module.exports = function(grunt){
 
   });
 
-  grunt.registerTask("default", ["babel","regenerator","uglify"]);
+  grunt.registerTask("default", ["copy","babel","regenerator","uglify"]);
 
 };
