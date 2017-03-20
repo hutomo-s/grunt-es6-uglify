@@ -30,20 +30,30 @@ module.exports = function(grunt){
       }
     },
 
-    clean: {
-      subfolders: ['unified/*/'],
-    },
-
     babel: {
         options: {
             sourceMap: true,
-            presets: ['es2015']
+            // add react
+            presets: ['es2015','react'],
+            compact: true, // readability
         },
         dist: {
-            files: {
-                'dist/app.trans.js': 'src/app.js'
-            }
+            // files: {
+            //     'dist/app.trans.js': 'src/app.js'
+            // }
+            files: [{
+              expand: true,
+              cwd: 'unified/',
+              src: ['*.js'],
+              dest: 'dist/',
+              ext: '.trans.js',
+            }],
         }
+    },
+
+    clean: {
+      subfolders: ['unified/*/'],
+      contents: ['dist/*.trans.js'],
     },
 
     regenerator: {
