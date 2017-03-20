@@ -53,7 +53,7 @@ module.exports = function(grunt){
 
     clean: {
       subfolders: ['unified/*/'],
-      contents: ['dist/*.trans.js'],
+      contents: ['dist/*.trans.js', 'dist/*.es5.js', 'dist/*.map'],
     },
 
     regenerator: {
@@ -74,9 +74,16 @@ module.exports = function(grunt){
 
     uglify: {
       main: {
-        files: {
-          "dist/app.min.js":["dist/app.es5.js"]
-        }
+        // files: {
+        //   "dist/app.min.js":["dist/app.es5.js"]
+        // }
+        files: [{
+          expand: true,
+          cwd: 'dist/',
+          src: ['*.es5.js'],
+          dest: 'dist/',
+          ext: '.min.js',
+        }]
       },
       options: {
         mangle:{toplevel:true},
@@ -89,6 +96,6 @@ module.exports = function(grunt){
 
   });
 
-  grunt.registerTask("default", ["copy","clean","babel","regenerator","uglify"]);
+  grunt.registerTask("default", ["copy","babel","regenerator","uglify","clean"]);
 
 };
