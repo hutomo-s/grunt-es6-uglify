@@ -61,9 +61,13 @@ module.exports = function(grunt){
         includeRuntime: true
       },
       dist: {
-        files: {
-          "dist/app.es5.js": "dist/app.trans.js"
-        }
+        files: [{
+              expand: true,
+              cwd: 'dist/',
+              src: ['*.trans.js'],
+              dest: 'dist/',
+              ext: '.es5.js',
+            }],
       }
     },
 
