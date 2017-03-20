@@ -26,4 +26,3 @@ $('#checkbox').click(function() {
             });
         }
     });
-});
