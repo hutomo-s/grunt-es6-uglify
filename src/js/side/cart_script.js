@@ -43,7 +43,7 @@
         if (message)
             $('#message_cart').html(message);
         else
-            return FALSE;
+            return false;
         $('#message_cart_header').html("Informasi");
         if (header)
             $('#message_cart_header').html(header);
@@ -93,7 +93,7 @@
         if (message)
             $('#message_green_cart').html(message);
         else
-            return FALSE;
+            return false;
 
         if (header)
             $('#message_cart_header_title').html(header);
@@ -133,7 +133,7 @@
         if (message)
             $('#message_cart_2').html(message);
         else
-            return FALSE;
+            return false;
         $('#message_cart_header_title_green').html("Informasi");
         if (header)
             $('#message_cart_header_title_green').html(header);

@@ -108,7 +108,7 @@ $( document ).on('click', '.iradio', function(){
             }
 
         },
-        error(){
+        error: function(){
             activateModal('Ups', "Terjadi kesalahan pada Kudo. Mohon maaf atas ketidaknyamanan Anda. Hubungi layanan pelanggan Kudo bila Anda mengalami kesulitan.");
         }
     });
